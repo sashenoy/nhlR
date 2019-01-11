@@ -1,0 +1,25 @@
+Package: nhlR
+Type: Package
+Title: NHL Rviz Package
+Version: 0.1.0
+Author: person("Sanjna", "Shenoy", email = "srs2270@columbia.edu",
+      role = c("aut", "cre"))
+Maintainer: The package maintainer is <srs2270@columbia.edu>
+Description: This package assists in visualizing rankings, goal locations, game outcomes and more.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+        httr,
+        dplyr,
+        rowr,
+        kableExtra,
+        knitr,
+        ggplot2,
+        plotly,
+        ggthemes,
+        tibble
+RoxygenNote: 6.1.0.9000
+VignetteBuilder: knitr
+Suggests: 
+    rmarkdown

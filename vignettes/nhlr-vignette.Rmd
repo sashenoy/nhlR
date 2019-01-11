@@ -1,0 +1,56 @@
+---
+title: "NHL R API client"
+author: "Sanjna Shenoy"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+runtime: shiny
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## NHL R Vignette
+
+This vignette will explain briefly the functionality of the four functions in the nhlR package. The four functions are the `Outcome` function, the `YearlyRankings` function, the `GoalLocations` function, and the `DailySchedule` Function
+
+## Daily Schedule function
+This function creates a table of the games that were played on a given date, formatted as YYYY/MM/DD.
+
+Example:
+```{r, eval=FALSE}
+DailySchedule("2018/11/12", API_KEY)
+```
+Once you obtain Game IDs from above, you can view the outcome in a clear table as well as Goal Locations using the functions described below
+## Outcome Function
+
+This function is designed to generate a table of results for a specific game.
+Example:
+```{r, eval=FALSE}
+Outcome(game_id, API_KEY)
+```
+
+## Goal Locations Function
+
+This function generates a map of the locations of where players were when goals occured. Scrolling over a plot point also allows the user to see information about the description of the goal
+
+Example:
+```{r, eval=FALSE}
+GoalLocations(game_id, API_KEY)
+```
+
+## Yearly Rankings
+
+This function generates a table of tem rankings per conference and division. Please note that only data from 2013-2018 is available using the trial version of the NHL API.
+
+Example:
+```{r, eval=FALSE}
+YearlyRankings("2013", API_KEY)
+```

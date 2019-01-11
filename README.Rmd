@@ -1,0 +1,42 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# nhlR
+
+The goal of nhlR is to assist in parsing information from the Sports Radar NHL API and produce clean tables and graphs to help visualize and understand NHL statistics. This package is intended only for the trial version of this API (Version 6). 
+
+
+
+## Installation
+
+You can install this version of nhlR by running the code below
+
+``` r
+devtools::install_github("sashenoy/nhlR")
+```
+
+## Example of Daily Schedule function
+
+```{r example}
+DailySchedule("2017/11/12", API_KEY)
+```
+
+## Example of Goal Locations function
+
+Using the first game_id from the table generated above:
+```{r}
+game_id <- "65249d07-0571-41b7-b65a-f6c995e2cb06"
+GoalLocations(game_id, API_KEY)
+```
+
